@@ -174,11 +174,11 @@ footer {
 }
 
 .temp {
-  display: none; /* Awalnya disembunyikan */
+  display: none;
   flex-direction: column;
   width: 100%;
 }
 
 .temp.active {
-  display: flex; /* Ditampilkan jika memiliki class 'active' */
+  display: flex;
 }

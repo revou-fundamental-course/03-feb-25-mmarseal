@@ -3,12 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Temperature Conversion</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <section class="container">
+      <header>
+        <h1>Temperature Conversion</h1>
+        <div>
+          <input type="checkbox" id="toggle" class="toggleCheckbox" />
+          <label for="toggle" class="toggleContainer">
+            <div>(&deg;C) to (&deg;F)</div>
+            <div>(&deg;F) to (&deg;C)</div>
+          </label>
+        </div>
+      </header>
+
+      <main>
+        <section class="convert">
+          <section class="converter">
+            <form id="tempForm">
+              <div id="input-celsius" class="temp active">
+                <label for="main-input-celsius">Celsius (&deg;C) :</label>
+                <input
+                  type="number"
+                  id="main-input-celsius"
+                  placeholder="Enter value"
+                />
+              </div>
+
+              <div id="input-fahrenheit" class="temp">
+                <label for="main-input-fahrenheit">Fahrenheit (&deg;F) :</label>
+                <input
+                  type="number"
+                  id="main-input-fahrenheit"
+                  placeholder="Enter value"
+                />
+              </div>
+
+              <div class="buttons">
+                <button type="button" id="convertBtn">Convert</button>
+                <button type="button" id="resetBtn">Reset</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="result">
+            <div>
+              <div id="result-fahrenheit" class="temp active">
+                <label for="main-result-fahrenheit"
+                  >Fahrenheit (&deg;F) :</label
+                >
+                <input type="text" id="main-result-fahrenheit" readonly />
+              </div>
+              <div id="result-celsius" class="temp">
+                <label for="main-result-celsius">Celsius(&deg;C) :</label>
+                <input type="text" id="main-result-celsius" readonly />
+              </div>
+            </div>
+
+            <div class="conversionMethod">
+              <div id="conversion-fahrenheit" class="temp active">
+                <label for="cara-konversi">Formula :</label>
+                <p>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> × 9/5) + 32</p>
+              </div>
+              <div id="conversion-celsius" class="temp">
+                <label for="cara-konversi">Formula :</label>
+                <p>S<sub>(&deg;C)</sub> = 5/9 x (S<sub>(&deg;F)</sub> - 32)</p>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="formula">
+          <div>
+            <div id="convertCelsius" class="temp active">
+              <h3>
+                How to Convert from Celsius (&deg;C) to Fahrenheit (&deg;F)
+              </h3>
+            </div>
+            <div id="convertFahrenheit" class="temp">
+              <h3>
+                How to Convert from Fahrenheit (&deg;F) to Celsius (&deg;C)
+              </h3>
+            </div>
+          </div>
+
+          <div id="celsiusToFahrenheit" class="temp active">
+            <p>
+              Temperature <span>S</span> in degrees Fahrenheit (&deg;F) equals
+              temperature <span>S</span> in degrees Celsius (&deg;C) times
+              <span>9/5</span> plus <span>32</span>.
+            </p>
+            <br />
+            <p>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> × 9/5) + 32</p>
+            <p>or</p>
+            <p>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> × 1.8) + 32</p>
+          </div>
+          <div id="fahrenheitToCelsius" class="temp">
+            <p>
+              Temperature <span>S</span> in degrees Celsius (&deg;C) equals
+              <span>5/9</span> times temperature <span>S</span> in degrees
+              Fahrenheit (&deg;F) minus <span>32</span>.
+            </p>
+            <br />
+            <p>S<sub>(&deg;C)</sub> = 5/9 x (S<sub>(&deg;F)</sub> - 32)</p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        Copyright &#169;2025; Design by <span>Muhamad Marseal</span>
+      </footer>
+    </section>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
+// switch / reverse
 document.getElementById("toggle").addEventListener("change", function () {
   let isFahrenheit = this.checked;
 
